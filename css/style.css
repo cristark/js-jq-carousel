@@ -58,6 +58,7 @@ main {
   height: 450px;
   background-image: linear-gradient(90deg, #bac5c9 0%, #c8d3d7 100%);
   border: 1px solid lightgrey;
+  border-bottom: 5px solid red;
 }
 
 .img_container img {
