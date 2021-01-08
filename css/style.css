@@ -13,12 +13,69 @@ a {
   color: black;
 }
 
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3em;
+  padding-top: 30px;
+  padding-left: 100px;
+}
+
 main {
   height: 100vh;
   background-image: linear-gradient(
     143deg,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 50%,
-    rgba(238, 174, 202, 1) 100%
+    #375e6f 0%,
+    #7ea2b8 50%,
+    #7693a5 100%
   );
+}
+
+.header_title {
+  height: 20%;
+  background-color: #181818;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.red_line {
+  border-top: 5px solid red;
+  position: absolute;
+  top: 30px;
+}
+
+.main_container {
+  margin: auto;
+}
+
+.selection_container {
+  display: flex;
+  justify-content: center;
+}
+
+.img_container {
+  width: 750px;
+  height: 450px;
+  background-image: linear-gradient(90deg, #bac5c9 0%, #c8d3d7 100%);
+  border: 1px solid lightgrey;
+}
+
+.img_container img {
+  display: none;
+}
+
+.img_container .active {
+  display: inline-block;
+}
+
+.prev,
+.next {
+  line-height: 450px;
+  margin: 20px;
+}
+
+.selection_container i {
+  font-size: 3em;
+  color: #fff;
+  cursor: pointer;
 }
