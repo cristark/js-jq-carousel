@@ -80,3 +80,20 @@ main {
   color: #fff;
   cursor: pointer;
 }
+
+.selection_bar {
+  width: 750px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.selection_bar .red_bar {
+  width: 140px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.selection_bar .active {
+  background-color: red;
+}
