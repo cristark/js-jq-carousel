@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
 
 a {
@@ -31,8 +31,9 @@ main {
   );
 }
 
+/* |HEADER */
 .header_title {
-  height: 20%;
+  height: 15%;
   background-color: #181818;
   margin-bottom: 20px;
   position: relative;
@@ -44,8 +45,40 @@ main {
   top: 30px;
 }
 
+/* |MAIN SECTION */
 .main_container {
+  height: 65%;
   margin: auto;
+  display: flex;
+}
+
+/*! Sezione sx */
+.sx_container {
+  display: flex;
+  width: 415px;
+}
+
+.tall_box {
+  height: 450px;
+  width: 20%;
+  background-color: #18181879;
+  margin-right: 2px;
+}
+
+.tall_box2 {
+  height: 450px;
+  width: 80%;
+}
+
+.brand_box {
+  height: calc(50% - 2px);
+  background-color: #18181879;
+  margin-bottom: 2px;
+}
+
+.price_box {
+  height: 50%;
+  background-color: #18181879;
 }
 
 .selection_container {
@@ -90,10 +123,19 @@ main {
 
 .selection_bar .red_bar {
   width: 140px;
-  height: 5px;
+  height: 15px;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .selection_bar .active {
   background-color: red;
+}
+
+/* | FOOTER */
+
+.footer {
+  height: 11%;
+  margin-top: 39px;
+  background-color: #181818;
 }

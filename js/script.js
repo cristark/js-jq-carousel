@@ -34,4 +34,19 @@ $(document).ready(function(){
         }
     });
 
+    
+    $('.selection_bar .red_bar').click(function(){
+    
+        var index = $(this).index();
+
+        $('.selection_bar .red_bar.active').removeClass('active');
+        
+        if ($(this).hasClass('active') == false) {
+            $(this).addClass('active');
+        }
+    
+        $('.img_container img.active').removeClass('active');
+        $('.img_container').children().eq(index).addClass('active');
+    });
+
 });
