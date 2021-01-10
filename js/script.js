@@ -1,48 +1,10 @@
 $(document).ready(function(){
 
     //*Attivazione freccia scorrimento avanti (dx)
-    $('.next i').click(function(){
-        var selectedImage = $('.img_container .img_box.active');
-        selectedImage.removeClass('active');
-
-        var selectedBar = $('.selection_bar .red_bar.active');
-        selectedBar.removeClass('active');
-
-        var selectedLogo = $('.brand_box img.active');
-        selectedLogo.removeClass('active');
-
-        if (selectedImage.hasClass('last')) {
-            $('.img_container .img_box.first').addClass('active');
-            $('.selection_bar .red_bar.first').addClass('active');
-            $('.brand_box img.first').addClass('active');
-        } else {
-            selectedImage.next().addClass('active');
-            selectedBar.next().addClass('active');
-            selectedLogo.next().addClass('active');
-        }
-    });
+    $('.next i').click(nextImage);
 
     //*Attivazione freccia scorrimento indietro (sx)
-    $('.prev i').click(function(){
-        var selectedImage = $('.img_container .img_box.active');
-        selectedImage.removeClass('active');
-
-        var selectedBar = $('.selection_bar .red_bar.active');
-        selectedBar.removeClass('active');
-
-        var selectedLogo = $('.brand_box img.active');
-        selectedLogo.removeClass('active');
-
-        if (selectedImage.hasClass('first')) {
-            $('.img_container .img_box.last').addClass('active');
-            $('.selection_bar .red_bar.last').addClass('active');
-            $('.brand_box img.last').addClass('active');
-        } else {
-            selectedImage.prev().addClass('active');
-            selectedBar.prev().addClass('active');
-            selectedLogo.prev().addClass('active');
-        }
-    });
+    $('.prev i').click(prevImage);
 
     //*Attivazione click su barra in basso
     $('.selection_bar .red_bar').click(function(){
@@ -64,6 +26,62 @@ $(document).ready(function(){
     });
 
     //*Attivazione con press pulsanti tastiera
-
+    $(document).keydown(function(e){
+        if (e.which == 39) {
+            nextImage();
+        } else if (e.which == 37) {
+            prevImage();
+        }     
+    });
 
 });
+
+// - FUNZIONI
+
+//Funzione per scorrere le immagini in avanti
+function nextImage() {
+
+    var selectedImage = $('.img_container .img_box.active');
+        selectedImage.removeClass('active');
+
+        var selectedBar = $('.selection_bar .red_bar.active');
+        selectedBar.removeClass('active');
+
+        var selectedLogo = $('.brand_box img.active');
+        selectedLogo.removeClass('active');
+
+        if (selectedImage.hasClass('last')) {
+            $('.img_container .img_box.first').addClass('active');
+            $('.selection_bar .red_bar.first').addClass('active');
+            $('.brand_box img.first').addClass('active');
+        } else {
+            selectedImage.next().addClass('active');
+            selectedBar.next().addClass('active');
+            selectedLogo.next().addClass('active');
+        }
+
+}
+
+// Funzione per scorrere le immagini indietro
+function prevImage() {
+
+    var selectedImage = $('.img_container .img_box.active');
+        selectedImage.removeClass('active');
+
+        var selectedBar = $('.selection_bar .red_bar.active');
+        selectedBar.removeClass('active');
+
+        var selectedLogo = $('.brand_box img.active');
+        selectedLogo.removeClass('active');
+
+        if (selectedImage.hasClass('first')) {
+            $('.img_container .img_box.last').addClass('active');
+            $('.selection_bar .red_bar.last').addClass('active');
+            $('.brand_box img.last').addClass('active');
+        } else {
+            selectedImage.prev().addClass('active');
+            selectedBar.prev().addClass('active');
+            selectedLogo.prev().addClass('active');
+        }
+
+}
