@@ -31,7 +31,9 @@ $(document).ready(function(){
             nextImage();
         } else if (e.which == 37) {
             prevImage();
-        }     
+        } else if (e.which == 13) {
+            audio.play();
+        }  
     });
 
 });

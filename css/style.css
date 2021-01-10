@@ -62,14 +62,14 @@ main {
   width: 415px;
 }
 
-.tall_box {
+.sx_container .tall_box {
   height: 450px;
   width: 20%;
   background-color: #18181879;
   margin-right: 2px;
 }
 
-.tall_box2 {
+.sx_container .tall_box2 {
   height: 450px;
   width: 80%;
 }
@@ -149,6 +149,26 @@ main {
   margin: 20px;
 }
 
+/*! Sezione dx */
+.dx_container {
+  display: flex;
+  width: 415px;
+}
+
+.dx_container .tall_box {
+  height: 450px;
+  width: 80%;
+  background-color: #18181879;
+  margin-right: 2px;
+}
+
+.dx_container .tall_box2 {
+  height: 450px;
+  width: 20%;
+  background-color: #18181879;
+}
+
+/* ! Blocchi colorati selezione immagini */
 .selection_container i {
   font-size: 3em;
   color: #fff;
@@ -178,5 +198,44 @@ main {
 .footer {
   height: 11%;
   margin-top: 39px;
+  background-color: #1818189f;
+  color: #fff;
+}
+
+.footer .main_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_box .current_box {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 15px 0 10px;
+}
+
+.current_box p {
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.current_box i {
+  margin-top: 2px;
+  margin-left: 20px;
+  color: #3eb3dd;
+}
+
+.main_box .select_box {
   background-color: #181818;
+  padding: 10px 95px 10px 10px;
+}
+
+.select_box span {
+  background-color: #bac5c9;
+  color: #181818;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.alert_mex {
+  text-align: center;
 }
