@@ -44,6 +44,11 @@ main {
   top: 30px;
 }
 
+.dot_line {
+  border-bottom: 5px dotted #fff;
+  padding-top: 108px;
+}
+
 /* |MAIN SECTION */
 .main_container {
   height: 65%;
@@ -93,6 +98,7 @@ main {
   justify-content: center;
 }
 
+/* ! BOX IMMAGINI AUTO */
 .img_container {
   width: 750px;
   height: 450px;
@@ -101,13 +107,40 @@ main {
   border-bottom: 5px solid red;
 }
 
-.img_container img {
+.img_container .img_box {
   display: none;
+  position: relative;
 }
 
-.img_container .active,
+.img_box .car_info {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.car_info h3 {
+  font-size: 130%;
+  color: #3f4346;
+}
+
+.car_info h2 {
+  font-size: 200%;
+  color: #181818;
+}
+
+.car_info p {
+  color: #3f4346;
+  font-weight: bold;
+}
+
+.car_info img {
+  width: 50px;
+  margin-top: 10px;
+}
+
+.img_box.active,
 .brand_box .active {
-  display: inline-block;
+  display: block;
 }
 
 .prev,
