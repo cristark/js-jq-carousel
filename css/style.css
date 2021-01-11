@@ -88,17 +88,41 @@ main {
   display: none;
 }
 
+/* ! Sezione prezzi AUTO */
 .price_box {
   height: 50%;
   background-color: #18181879;
 }
 
+.price_box .price {
+  display: none;
+  padding: 20px 0 0 15px;
+}
+
+.price_box .price h3 {
+  text-transform: uppercase;
+  color: #bac5c9;
+  font-weight: bold;
+}
+
+.price_box .price h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.price.active {
+  display: block;
+}
+
+/* ! BOX IMMAGINI AUTO */
 .selection_container {
   display: flex;
   justify-content: center;
 }
 
-/* ! BOX IMMAGINI AUTO */
 .img_container {
   width: 750px;
   height: 450px;

@@ -23,6 +23,9 @@ $(document).ready(function(){
         
         $('.brand_box img.active').removeClass('active');
         $('.brand_box').children().eq(index).addClass('active');
+        
+        $('.price_box .price.active').removeClass('active');
+        $('.price_box').children().eq(index).addClass('active');
 
     });
 
@@ -56,16 +59,21 @@ function nextImage() {
         var selectedLogo = $('.brand_box img.active');
         selectedLogo.removeClass('active');
 
+        var selectedPrice = $('.price_box .price.active');
+        selectedPrice.removeClass('active');
+
         $('.img_container .selected_box').removeClass('select');
 
         if (selectedImage.hasClass('last')) {
             $('.img_container .img_box.first').addClass('active');
             $('.selection_bar .red_bar.first').addClass('active');
             $('.brand_box img.first').addClass('active');
+            $('.price_box .price.first').addClass('active');
         } else {
             selectedImage.next().addClass('active');
             selectedBar.next().addClass('active');
             selectedLogo.next().addClass('active');
+            selectedPrice.next().addClass('active');
         }
 
 }
@@ -82,16 +90,21 @@ function prevImage() {
         var selectedLogo = $('.brand_box img.active');
         selectedLogo.removeClass('active');
 
+        var selectedPrice = $('.price_box .price.active');
+        selectedPrice.removeClass('active');
+
         $('.img_container .selected_box').removeClass('select');
 
         if (selectedImage.hasClass('first')) {
             $('.img_container .img_box.last').addClass('active');
             $('.selection_bar .red_bar.last').addClass('active');
             $('.brand_box img.last').addClass('active');
+            $('.price_box .price.last').addClass('active');
         } else {
             selectedImage.prev().addClass('active');
             selectedBar.prev().addClass('active');
             selectedLogo.prev().addClass('active');
+            selectedPrice.prev().addClass('active');
         }
 
 }
