@@ -12,13 +12,14 @@ $(document).ready(function(){
         var index = $(this).index();
 
         $('.selection_bar .red_bar.active').removeClass('active');
+        $('.img_container .selected_box').removeClass('select');
         
         if ($(this).hasClass('active') == false) {
             $(this).addClass('active');
         }
     
         $('.img_container .img_box.active').removeClass('active');
-        $('.img_container').children().eq(index).addClass('active');
+        $('.cars_container').children().eq(index).addClass('active');
         
         $('.brand_box img.active').removeClass('active');
         $('.brand_box').children().eq(index).addClass('active');
@@ -29,10 +30,13 @@ $(document).ready(function(){
     $(document).keydown(function(e){
         if (e.which == 39) {
             nextImage();
+            $('.img_container .selected_box').removeClass('select');
         } else if (e.which == 37) {
             prevImage();
+            $('.img_container .selected_box').removeClass('select');
         } else if (e.which == 13) {
-            audio.play();
+            $('#audio')[0].play();
+            $('.img_container .selected_box').addClass('select');
         }  
     });
 
@@ -51,6 +55,8 @@ function nextImage() {
 
         var selectedLogo = $('.brand_box img.active');
         selectedLogo.removeClass('active');
+
+        $('.img_container .selected_box').removeClass('select');
 
         if (selectedImage.hasClass('last')) {
             $('.img_container .img_box.first').addClass('active');
@@ -75,6 +81,8 @@ function prevImage() {
 
         var selectedLogo = $('.brand_box img.active');
         selectedLogo.removeClass('active');
+
+        $('.img_container .selected_box').removeClass('select');
 
         if (selectedImage.hasClass('first')) {
             $('.img_container .img_box.last').addClass('active');

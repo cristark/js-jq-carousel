@@ -105,6 +105,37 @@ main {
   background-image: linear-gradient(90deg, #bac5c9 0%, #c8d3d7 100%);
   border: 1px solid lightgrey;
   border-bottom: 5px solid red;
+  position: relative;
+}
+
+.img_container .selected_box {
+  display: none;
+}
+
+.selected_box.select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #bac5c9c5;
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.selected_box h2 {
+  font-size: 3.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: red;
+  text-shadow: 2px 2px #fff;
+  margin-bottom: 10px;
+}
+
+.selected_box img {
+  height: 40%;
 }
 
 .img_container .img_box {
